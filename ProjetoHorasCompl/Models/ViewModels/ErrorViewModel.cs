@@ -1,6 +1,6 @@
 using System;
 
-namespace ProjetoHorasCompl.Models.ViewModels
+namespace ProjetoHorasCompl.Models
 {
     public class ErrorViewModel
     {

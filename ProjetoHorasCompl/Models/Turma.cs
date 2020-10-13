@@ -2,7 +2,7 @@
 {
     public class Turma
     {
-        public int TurCodigo { get; set; }
+        public int Id { get; set; }
         public string TurNome { get; set;}
     }
 }
