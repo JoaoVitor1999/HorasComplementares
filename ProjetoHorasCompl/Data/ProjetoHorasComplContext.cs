@@ -14,6 +14,9 @@ namespace ProjetoHorasCompl.Data
         {
         }
 
-        public DbSet<ProjetoHorasCompl.Models.Turma> Turma { get; set; }
+        public DbSet<Turma> Turma { get; set; }
+        public DbSet<Aluno> Aluno { get; set; }
+        public DbSet<Comprovante> Comprovante { get; set; }
+        public DbSet<TipoComprovante> TipoComprovante { get; set; }
     }
 }
