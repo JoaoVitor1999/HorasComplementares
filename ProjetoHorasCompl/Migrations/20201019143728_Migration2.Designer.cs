@@ -9,7 +9,7 @@ using ProjetoHorasCompl.Data;
 namespace ProjetoHorasCompl.Migrations
 {
     [DbContext(typeof(ProjetoHorasComplContext))]
-    [Migration("20201015193538_Migration2")]
+    [Migration("20201019143728_Migration2")]
     partial class Migration2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,9 +24,7 @@ namespace ProjetoHorasCompl.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AluIdTurma");
-
-                    b.Property<int>("AluNome");
+                    b.Property<string>("AluNome");
 
                     b.Property<int?>("IdTurmaId");
 

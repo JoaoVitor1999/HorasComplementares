@@ -22,9 +22,7 @@ namespace ProjetoHorasCompl.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AluIdTurma");
-
-                    b.Property<int>("AluNome");
+                    b.Property<string>("AluNome");
 
                     b.Property<int?>("IdTurmaId");
 

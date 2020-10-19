@@ -14,8 +14,7 @@ namespace ProjetoHorasCompl.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    AluIdTurma = table.Column<int>(nullable: false),
-                    AluNome = table.Column<int>(nullable: false),
+                    AluNome = table.Column<string>(nullable: true),
                     IdTurmaId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
