@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ProjetoHorasCompl.Data;
+using ProjetoHorasCompl.Services;
 
 namespace ProjetoHorasCompl
 {
@@ -41,6 +42,7 @@ namespace ProjetoHorasCompl
 builder.MigrationsAssembly("ProjetoHorasCompl")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<AlunoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
