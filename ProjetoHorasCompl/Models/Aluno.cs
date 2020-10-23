@@ -9,18 +9,20 @@ namespace ProjetoHorasCompl.Models
     {
         public int Id { get; set; }
         public string AluNome { get; set; }
-        public Turma IdTurma { get; set; }
+        public Turma Turma { get; set; }
+        public int TurmaId { get; set; }
         public ICollection<Comprovante> Comprovantes { get; set; } = new List<Comprovante>();
+        
 
         public Aluno()
         {
         }
 
-        public Aluno(int id, string aluNome, Turma idTurma)
+        public Aluno(int id, string aluNome, Turma turma)
         {
             Id = id;
             AluNome = aluNome;
-            IdTurma = idTurma;
+            Turma = turma;
         }
 
         public void AddComprovante(Comprovante sr)

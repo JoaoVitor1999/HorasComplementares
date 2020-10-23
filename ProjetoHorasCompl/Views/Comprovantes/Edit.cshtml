@@ -1,0 +1,49 @@
+﻿@model ProjetoHorasCompl.Models.Comprovante
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Comprovante</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CmpDescricao" class="control-label"></label>
+                <input asp-for="CmpDescricao" class="form-control" />
+                <span asp-validation-for="CmpDescricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpDataInicio" class="control-label"></label>
+                <input asp-for="CmpDataInicio" class="form-control" />
+                <span asp-validation-for="CmpDataInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpDataFim" class="control-label"></label>
+                <input asp-for="CmpDataFim" class="form-control" />
+                <span asp-validation-for="CmpDataFim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpQtdHoras" class="control-label"></label>
+                <input asp-for="CmpQtdHoras" class="form-control" />
+                <span asp-validation-for="CmpQtdHoras" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

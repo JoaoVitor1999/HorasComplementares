@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoHorasCompl.Data;
 
 namespace ProjetoHorasCompl.Migrations
 {
     [DbContext(typeof(ProjetoHorasComplContext))]
-    partial class ProjetoHorasComplContextModelSnapshot : ModelSnapshot
+    [Migration("20201023174438_TurmaForeignKey")]
+    partial class TurmaForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,8 +21,7 @@ namespace ProjetoHorasCompl.Migrations
 
             modelBuilder.Entity("ProjetoHorasCompl.Models.Aluno", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<string>("AluNome");
 
