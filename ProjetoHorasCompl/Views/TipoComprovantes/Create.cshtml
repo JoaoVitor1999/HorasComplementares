@@ -1,21 +1,21 @@
-﻿@model ProjetoHorasCompl.Models.Turma
+﻿@model ProjetoHorasCompl.Models.TipoComprovante
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h2>Adicionar Turmas</h2>
+<h2>Adicionar Tipo Comprovante</h2>
 
-<h4>Turma</h4>
+<h4>Tipo Comprovante</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="TurNome" class="control-label">Turma</label>
-                <input asp-for="TurNome" class="form-control" />
-                <span asp-validation-for="TurNome" class="text-danger"></span>
+                <label asp-for="TipNome" class="control-label">Nome</label>
+                <input asp-for="TipNome" class="form-control" />
+                <span asp-validation-for="TipNome" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Adicionar" class="btn btn-default" />

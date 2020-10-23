@@ -21,8 +21,7 @@ namespace ProjetoHorasCompl.Migrations
 
             modelBuilder.Entity("ProjetoHorasCompl.Models.Aluno", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
 
                     b.Property<string>("AluNome");
 

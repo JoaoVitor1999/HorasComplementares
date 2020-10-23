@@ -1,19 +1,19 @@
-﻿@model IEnumerable<ProjetoHorasCompl.Models.Aluno>
+﻿@model IEnumerable<ProjetoHorasCompl.Models.TipoComprovante>
 
 @{
-    ViewData["Title"] = "Alunos";
+    ViewData["Title"] = "TipoComprovante";
 }
 
-<h2>Alunos</h2>
+<h2>Tipos Comprovante</h2>
 
+<p>
+    <a asp-action="Create">Adicionar</a>
+</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Nome
-            </th>
-            <th>
-                Matrícula
+                Tipo Comprovante
             </th>
             <th></th>
         </tr>
@@ -22,12 +22,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AluNome)
+                @Html.DisplayFor(modelItem => item.TipNome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
             </td>

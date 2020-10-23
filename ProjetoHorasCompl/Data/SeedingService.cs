@@ -24,7 +24,7 @@ namespace ProjetoHorasCompl.Data
 
             Turma t1 = new Turma(1, "Sistemas de Informação");
 
-            Aluno a1 = new Aluno(1, "Joao", t1);
+            Aluno a1 = new Aluno(19157001, "Joao", t1);
 
             TipoComprovante tc1 = new TipoComprovante(1,"Palestra");
 

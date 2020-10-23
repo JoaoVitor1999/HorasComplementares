@@ -1,0 +1,30 @@
+﻿@model ProjetoHorasCompl.Models.TipoComprovante
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Tipo Comprovante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tipo Comprovante
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipNome)
+        </dd>
+        <dt>
+            Id
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>
