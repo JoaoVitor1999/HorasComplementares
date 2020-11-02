@@ -1,51 +1,47 @@
-﻿@model IEnumerable<ProjetoHorasCompl.Models.Comprovante>
-
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "Comprovantes";
 }
 
 <h2>Comprovantes</h2>
 
-    <div class="row">
-        <div class="col-md-6">
-            <form class="form-horizontal" asp-action="BuscaSimples">
-                <fieldset>
-                    <legend>Busca Simples</legend>
-                    <div class="form-group">
-                        <label for="aluMatricula" class="col-lg-2 control-label">Matrícula</label>
-                        <div class="col-lg-10">
-                            <input type="text" name="aluMatricula" class="form-control" />
-                        </div>
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="BuscaSimples">
+            <fieldset>
+                <legend>Busca Simples</legend>
+                <div class="form-group">
+                    <label for="aluMatricula" class="col-lg-2 control-label">Matrícula</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="aluMatricula" class="form-control" />
                     </div>
-                    <div class="form-group">
-                        <div class="col-lg-10 col-lg-offset-2">
-                            <button type="submit" class="btn btn-primary">Buscar</button>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
                     </div>
-                </fieldset>
-            </form>
-        </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <form class="form-horizontal" asp-action="BuscaAgrupada">
-                <fieldset>
-                    <legend>Busca por Turmas</legend>
-                    <div class="form-group">
-                        <label for="idTurma" class="col-lg-2 control-label">Turma</label>
-                        <div class="col-lg-10">
-                            <input type="text" name="idTurma" class="form-control" />
-                        </div>
+<div class="row">
+    <div class="col-md-6">
+        <form class="form-horizontal" asp-action="BuscaAgrupada">
+            <fieldset>
+                <legend>Busca por Turmas</legend>
+                <div class="form-group">
+                    <label for="idTurma" class="col-lg-2 control-label">Turma</label>
+                    <div class="col-lg-10">
+                        <input type="text" name="idTurma" class="form-control" />
                     </div>
-                    <div class="form-group">
-                        <div class="col-lg-10 col-lg-offset-2">
-                            <button type="submit" class="btn btn-primary">Buscar</button>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
                     </div>
-                </fieldset>
-            </form>
-        </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
-
-    
+</div>

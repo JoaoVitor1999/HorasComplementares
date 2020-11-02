@@ -46,6 +46,7 @@ builder.MigrationsAssembly("ProjetoHorasCompl")));
             services.AddScoped<SeedingService>();
             services.AddScoped<AlunoService>();
             services.AddScoped<TurmaService>();
+            services.AddScoped<ComprovanteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
