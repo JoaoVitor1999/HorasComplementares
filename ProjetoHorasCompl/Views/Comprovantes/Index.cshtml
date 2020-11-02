@@ -4,50 +4,48 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Comprovantes</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CmpDescricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CmpDataInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CmpDataFim)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CmpQtdHoras)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CmpDescricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CmpDataInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CmpDataFim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CmpQtdHoras)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-horizontal" asp-action="BuscaSimples">
+                <fieldset>
+                    <legend>Busca Simples</legend>
+                    <div class="form-group">
+                        <label for="aluMatricula" class="col-lg-2 control-label">Matrícula</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="aluMatricula" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-horizontal" asp-action="BuscaAgrupada">
+                <fieldset>
+                    <legend>Busca por Turmas</legend>
+                    <div class="form-group">
+                        <label for="idTurma" class="col-lg-2 control-label">Turma</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="idTurma" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    

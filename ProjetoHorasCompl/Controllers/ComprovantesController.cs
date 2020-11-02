@@ -49,9 +49,6 @@ namespace ProjetoHorasCompl.Controllers
             return View();
         }
 
-        // POST: Comprovantes/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CmpDescricao,CmpDataInicio,CmpDataFim,CmpQtdHoras")] Comprovante comprovante)
@@ -148,6 +145,15 @@ namespace ProjetoHorasCompl.Controllers
         private bool ComprovanteExists(int id)
         {
             return _context.Comprovante.Any(e => e.Id == id);
+        }
+
+        public IActionResult BuscaSimples()
+        {
+            return View();
+        }
+        public IActionResult BuscaAgrupada()
+        {
+            return View();
         }
     }
 }

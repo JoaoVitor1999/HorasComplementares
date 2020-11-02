@@ -11,9 +11,12 @@ namespace ProjetoHorasCompl.Models
         public int Id { get; set; }
         public string CmpDescricao { get; set; }
         [DataType(DataType.Date)]
+        [Required(ErrorMessage ="Data do início é um campo obrigatório.")]
         public DateTime CmpDataInicio { get; set; }
         [DataType(DataType.Date)]
+        [Required(ErrorMessage = "Data do fim é um campo obrigatório.")]
         public DateTime CmpDataFim { get; set; }
+        [Required(ErrorMessage = "Quantidade de horas é um campo obrigatório.")]
         public int CmpQtdHoras { get; set; }
         public Aluno CmpAluId { get; set; }
         public TipoComprovante CmpTipoComprovantes { get; set; }
