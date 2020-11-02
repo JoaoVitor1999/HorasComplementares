@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,9 @@ namespace ProjetoHorasCompl.Models
     {
         public int Id { get; set; }
         public string CmpDescricao { get; set; }
+        [DataType(DataType.Date)]
         public DateTime CmpDataInicio { get; set; }
+        [DataType(DataType.Date)]
         public DateTime CmpDataFim { get; set; }
         public int CmpQtdHoras { get; set; }
         public Aluno CmpAluId { get; set; }

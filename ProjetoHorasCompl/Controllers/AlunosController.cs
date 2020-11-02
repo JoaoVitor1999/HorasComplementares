@@ -7,6 +7,7 @@ using ProjetoHorasCompl.Data;
 using ProjetoHorasCompl.Models.ViewModels;
 using ProjetoHorasCompl.Models;
 using ProjetoHorasCompl.Services;
+using System.Diagnostics;
 
 namespace ProjetoHorasCompl.Controllers
 {
@@ -32,13 +33,13 @@ namespace ProjetoHorasCompl.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id não fornecido." });
             }
 
             var aluno = _alunoService.SelecionarId(id.Value);
             if (aluno == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id não fornecido." });
             }
 
             return View(aluno);
@@ -49,14 +50,14 @@ namespace ProjetoHorasCompl.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id não fornecido." });
             }
 
             var aluno = _alunoService.SelecionarId(id.Value);
                 
             if (aluno == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id não fornecido." });
             }
 
             return View(aluno);
@@ -70,6 +71,14 @@ namespace ProjetoHorasCompl.Controllers
             _alunoService.Remover(id);
             return RedirectToAction(nameof(Index));
         }
-
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
+            {
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+            return View(viewModel);
+        }
     }
 }
